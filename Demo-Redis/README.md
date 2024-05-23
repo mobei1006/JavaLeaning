@@ -1,4 +1,4 @@
-### Redis 的集成配置
+### SpringBoot整合Redis
 引入依赖
 ```xml
 <dependency>

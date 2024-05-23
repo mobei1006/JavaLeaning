@@ -17,6 +17,7 @@
         <module>Demo-Schedule</module>
         <module>Demo-FIleDownload</module>
         <module>Demo-Redis</module>
+        <module>Demo-Mongo</module>
     </modules>
 
 
