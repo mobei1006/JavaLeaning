@@ -12,6 +12,7 @@
         <module>Demo-MP</module>
         <module>Demo-Cache</module>
         <module>Demo-Swagger</module>
+        <module>Jemter</module>
     </modules>
 
 
