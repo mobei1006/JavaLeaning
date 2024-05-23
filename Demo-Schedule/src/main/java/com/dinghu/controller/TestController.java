@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @author 1.0
  * @author huding
- * @Date: 2024/05/23 09:37
+ * @Date: 2024/05/22 09:57
  * @Description:
  */
 
@@ -19,5 +19,6 @@ public class TestController {
     public String t1() {
         return "ok";
     }
+
 
 }
