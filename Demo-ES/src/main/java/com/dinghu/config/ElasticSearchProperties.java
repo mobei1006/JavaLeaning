@@ -51,8 +51,15 @@ public class ElasticSearchProperties {
      */
     private int maxConnectPerRoute;
 
+    /**
+     * 用户名
+     */
     private String userName;
 
+
+    /**
+     * 密码
+     */
     private String password;
 
 

@@ -27,7 +27,7 @@ import java.util.Properties;
 public class EmailServiceImpl implements EmailService {
 
     @Resource
-    private MailProperties mailProperties;
+    private MailProperties mailProperties; //邮件配置类，会自动的读取
 
     @Resource
     private JavaMailSender javaMailSender;

@@ -82,7 +82,7 @@ public abstract class AbstractMongoConfig {
 public class DemoMongoConfig extends AbstractMongoConfig {
 
     @Override
-    @Bean(name = "dataApiMongoTemplate")
+    @Bean(name = "demoMongoTemplate")
     public MongoTemplate getMongoTemplate() {
         return new MongoTemplate(getMongoDbFactory());
     }

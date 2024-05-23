@@ -17,7 +17,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 public class DemoMongoConfig extends AbstractMongoConfig {
 
     @Override
-    @Bean(name = "dataApiMongoTemplate")
+    @Bean(name = "DemoMongoTemplate")
     public MongoTemplate getMongoTemplate() {
         return new MongoTemplate(getMongoDbFactory());
     }
