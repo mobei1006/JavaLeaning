@@ -15,6 +15,7 @@
         <module>Jemter</module>
         <module>Demo-Email</module>
         <module>Demo-Schedule</module>
+        <module>Demo-FIleDownload</module>
     </modules>
 
 
