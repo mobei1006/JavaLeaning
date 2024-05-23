@@ -30,12 +30,12 @@
 #### HTTP 请求默认值
 HTTP 请求发送的默认值，只需要将我们准备测试接口填写号即可
 
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/40783336/1716272721831-c8e1f55b-ac2b-4c2a-95ff-c9915c1b45ae.png#averageHue=%233f4344&clientId=u1d21fe56-6951-4&from=paste&height=249&id=u857637aa&originHeight=249&originWidth=675&originalType=binary&ratio=1&rotation=0&showTitle=false&size=10312&status=done&style=none&taskId=u3e4c294e-6c78-4047-a719-353297236ee&title=&width=675)
+![image.png](https://cdn.nlark.com/yuque/0/2024/png/40783336/1716455362787-56b4217a-79cb-4ba8-a661-e307c8a0c501.png#averageHue=%233f4345&clientId=uc17c9361-c585-4&from=paste&height=258&id=uf427200a&originHeight=258&originWidth=967&originalType=binary&ratio=1&rotation=0&showTitle=false&size=9064&status=done&style=stroke&taskId=u6ddddda9-f7c9-4756-ab2a-74cf3c51413&title=&width=967)
 
 #### HTTP 请求
 HTTP 请求主要设置请求发送的地址。注意我这里的时从文件构建的，所以下面的参数没有填写。如果是正常的参数，可以直接填写。
 
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/40783336/1716272776178-314b7c52-7d95-4419-93d7-bcd7f2e97e31.png#averageHue=%233e4244&clientId=u1d21fe56-6951-4&from=paste&height=310&id=ud7d59d92&originHeight=310&originWidth=615&originalType=binary&ratio=1&rotation=0&showTitle=false&size=15095&status=done&style=none&taskId=ud50a4908-b9cd-45f0-8264-7b9c65a2669&title=&width=615)
+![image.png](https://cdn.nlark.com/yuque/0/2024/png/40783336/1716455399964-47fabfec-8f15-4d51-acc8-a397ab39b80e.png#averageHue=%233e4245&clientId=uc17c9361-c585-4&from=paste&height=316&id=ua9d1c2fd&originHeight=316&originWidth=956&originalType=binary&ratio=1&rotation=0&showTitle=false&size=15343&status=done&style=stroke&taskId=u603be2de-7829-4f36-b608-72566e3689e&title=&width=956)
 
 ##### JSR233 预处理程序
 这个主要是前置处理器，来完成我们对请求体的构建【从文件读取数据构建】
