@@ -1,4 +1,4 @@
-### Elasticsearch 集成配置
+### SpringBoot整合Elasticsearch
 引入依赖
 ```xml
 <dependency>
