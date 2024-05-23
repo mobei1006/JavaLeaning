@@ -11,6 +11,7 @@
     <modules>
         <module>Demo-MP</module>
         <module>Demo-Cache</module>
+        <module>Demo-Swagger</module>
     </modules>
 
 
