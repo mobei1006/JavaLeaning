@@ -6,9 +6,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.mail.MailProperties;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
+import org.apache.commons.lang3.StringUtils;
 
 import javax.annotation.Resource;
+import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
 /**
@@ -23,12 +26,46 @@ import java.util.Properties;
 @Slf4j
 public class EmailServiceImpl implements EmailService {
 
-
     @Resource
     private MailProperties mailProperties;
 
     @Resource
     private JavaMailSender javaMailSender;
+
+    @Override
+    public boolean sendWithHtml(String to, String cc, String subject, String html) {
+        if (StringUtils.isEmpty(to)) {
+            log.info("未配置收件人!");
+        }
+
+        addSslConfig(javaMailSender);
+        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+
+        MimeMessageHelper mimeMessageHelper = null;
+        try {
+            mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
+            // 邮件发送来源
+            mimeMessageHelper.setFrom(mailProperties.getUsername());
+            // 发送目标
+            mimeMessageHelper.setTo(to.split(","));
+            // 抄送人
+            if (StringUtils.isNotBlank(cc)) {
+                mimeMessageHelper.setCc(cc.split(","));
+            }
+            // 标题
+            mimeMessageHelper.setSubject(subject);
+            // 内容，并设置内容 html 格式为 true
+            mimeMessageHelper.setText(html, true);
+
+            javaMailSender.send(mimeMessage);
+            log.info("## Send the mail with html success ...");
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.error("Send html mail error: ", e);
+            return false;
+        }
+        return true;
+    }
 
     private void addSslConfig(JavaMailSender mailSender) {
         if (!(mailSender instanceof JavaMailSenderImpl)) {
@@ -53,5 +90,6 @@ public class EmailServiceImpl implements EmailService {
         props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
         impl.setJavaMailProperties(props);
     }
+
 
 }

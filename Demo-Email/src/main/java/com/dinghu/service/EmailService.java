@@ -7,5 +7,5 @@ package com.dinghu.service;
  * @Description:
  */
 public interface EmailService {
-
+    boolean sendWithHtml(String to, String cc, String subject, String html);
 }
