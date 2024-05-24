@@ -13,3 +13,4 @@
 - SpringBoot定时任务 --> Demo-Schedule
 - SpringBoot集成Swagger --> Demo-Swagger
 - Jmter操作手册 --> Jemter
+- SpringBoot整合Caffeine来实现缓存 --> Demo-Cache
